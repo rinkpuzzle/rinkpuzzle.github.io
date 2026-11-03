@@ -1,0 +1,75 @@
+:root{
+  --navy:#16324a;--navy-deep:#10283c;--red:#ff3b5c;--red-dark:#c41438;
+  --ice:#d7f0fb;--ice-soft:#f4fbff;--ice-line:#c7e6f5;--muted:#5d7386;--white:#fff;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ice-soft);color:var(--navy);
+  font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--red-dark);text-underline-offset:2px;overflow-wrap:anywhere}
+a:hover{color:var(--red)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 22px}
+
+/* header */
+.site-header{background:var(--navy);color:var(--white)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:62px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--white);text-decoration:none;font-weight:700;letter-spacing:.2px}
+.brand img{width:34px;height:34px;border-radius:8px}
+.brand:hover{color:var(--white)}
+.nav{display:flex;gap:18px;font-size:15px}
+.nav a{color:var(--ice);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+.nav a:hover,.nav a[aria-current=page]{color:var(--white);border-bottom-color:var(--red)}
+
+main{flex:1}
+
+/* landing */
+.hero{background:linear-gradient(180deg,var(--ice) 0%,var(--ice-soft) 100%);text-align:center;padding:64px 0 56px}
+.hero .icon{width:148px;height:148px;border-radius:33px;box-shadow:0 14px 34px rgba(22,50,74,.22)}
+.hero h1{font-size:2.6rem;line-height:1.1;margin:26px 0 8px;letter-spacing:-.5px}
+.tagline{font-size:1.3rem;color:var(--muted);margin:0 0 30px}
+.btn{display:inline-block;background:var(--red);color:var(--white);text-decoration:none;font-weight:700;
+  padding:14px 28px;border-radius:999px;box-shadow:0 6px 16px rgba(255,59,92,.3);transition:transform .1s,background .15s}
+.btn:hover{background:var(--red-dark);color:var(--white);transform:translateY(-1px)}
+.btn small{display:block;font-weight:500;font-size:.75rem;opacity:.9;letter-spacing:.3px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:36px 0 56px}
+.card{display:block;background:var(--white);border:1px solid var(--ice-line);border-radius:14px;padding:20px 22px;
+  text-decoration:none;color:var(--navy);transition:border-color .15s,box-shadow .15s}
+.card:hover{color:var(--navy);border-color:var(--red);box-shadow:0 6px 18px rgba(22,50,74,.08)}
+.card strong{display:block;font-size:1.1rem;margin-bottom:2px}
+.card span{color:var(--muted);font-size:.95rem}
+
+/* content pages */
+.page{padding:44px 0 64px}
+.page h1{font-size:2.1rem;line-height:1.15;margin:0 0 6px;letter-spacing:-.3px}
+.page h2{font-size:1.2rem;margin:34px 0 6px}
+.page .meta{color:var(--muted);font-size:.95rem;margin:0 0 22px}
+.lead{font-size:1.1rem}
+.contact{background:var(--white);border:1px solid var(--ice-line);border-left:5px solid var(--red);
+  border-radius:12px;padding:18px 20px;margin:22px 0 8px}
+.contact p{margin:.3em 0}
+.contact .email{font-size:1.2rem;font-weight:700}
+.faq details{background:var(--white);border:1px solid var(--ice-line);border-radius:12px;margin:10px 0;padding:0 18px}
+.faq summary{cursor:pointer;font-weight:650;padding:14px 0;list-style-position:outside}
+.faq details[open] summary{border-bottom:1px solid var(--ice-line);margin-bottom:6px}
+.faq details p{margin:.6em 0 1em}
+
+/* footer */
+.site-footer{border-top:1px solid var(--ice-line);color:var(--muted);font-size:14px;padding:22px 0}
+.site-footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+.site-footer nav{display:flex;gap:16px}
+.site-footer a{color:var(--muted)}
+
+@media (max-width:560px){
+  body{font-size:16px}
+  .nav{gap:14px;font-size:14px}
+  .brand span{font-size:15px}
+  .hero{padding:44px 0 40px}
+  .hero .icon{width:120px;height:120px;border-radius:27px}
+  .hero h1{font-size:2.1rem}
+  .tagline{font-size:1.12rem}
+  .cards{grid-template-columns:1fr}
+  .page{padding:32px 0 48px}
+  .page h1{font-size:1.75rem}
+}
